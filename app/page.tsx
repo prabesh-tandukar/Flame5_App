@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import MenuItem from "../components/MenuItem";
+import { menuItems } from "../libs/menuData";
 
 export default function Home() {
   return (
@@ -6,19 +8,29 @@ export default function Home() {
       {/* Header */}
       <Header />
 
-      {/* Main Content */}
+      {/* Welcome Section */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">
-            Welcome to Our Restaurant
-          </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Our Menu</h2>
           <p className="text-gray-600 mb-8">
-            Browse our menu and place your order online
+            Flame-grilled perfection in every bite
           </p>
+        </div>
 
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            View Menu
-          </button>
+        {/* Menu Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {menuItems
+            .filter((item) => item.available)
+            .map((item) => (
+              <MenuItem
+                key={item.id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+                category={item.category}
+              />
+            ))}
         </div>
       </div>
     </main>
