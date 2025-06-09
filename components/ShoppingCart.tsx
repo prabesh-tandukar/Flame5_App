@@ -1,5 +1,5 @@
 // components/ShoppingCart.tsx
-import { CartItem } from "@/lib/types";
+import { CartItem } from "../libs/types";
 
 interface ShoppingCartProps {
   cartItems: CartItem[];
