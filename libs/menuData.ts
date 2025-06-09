@@ -12,10 +12,10 @@ export interface MenuItem {
 export const menuItems: MenuItem[] = [
   {
     id: 1,
-    name: "Flame Burger Deluxe",
+    name: "Smash",
     description:
-      "Our signature burger with flame-grilled beef, special sauce, and crispy onions",
-    price: 14.99,
+      "Bun, 6oz Black Angus Beef, Aged Cheddar, Pickle, Tomato, Lettuce, Cheeto Sauce, Relish",
+    price: 11.99,
     image: "🍔",
     category: "Burgers",
     available: true,
